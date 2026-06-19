@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: 'Inter', sans-serif;
+  --color-remote-blue: #0a0e2a;
+  --color-remote-blue-light: #1a1f4e;
+  --color-remote-purple: #6c3bf1;
+  --color-remote-purple-light: #8b5cf6;
+  --color-remote-purple-soft: #f5f0ff;
+  --color-remote-accent: #ff6b35;
+  --color-remote-gray: #f8f9fc;
+  --color-remote-text: #4a5568;
+  --color-remote-text-light: #8896ab;
+  --color-remote-border: #e8ecf1;
+  --color-nav-start: #234a9f;
+  --color-nav-end: #2c56b3;
+  --color-nav-yellow: #facc15;
+  --color-signup-bg: #dbeafe;
+  --color-signup-text: #1d4ed8;
+  --color-footer-start: #3D79C3;
+  --color-footer-mid: #2E63B2;
+  --color-footer-end: #234F9D;
+  --color-footer-logo: #6BE0F8;
+  --color-footer-btn-start: #4A8DD8;
+  --color-footer-btn-end: #2D5DB4;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-inter text-remote-text antialiased;
+    margin: 0;
+  }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
