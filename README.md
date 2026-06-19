@@ -4,7 +4,7 @@ A modern, fully responsive landing page for a global remote job board platform. 
 
 ## 🚀 Live Demo
 
-*(Add deployed URL here)*
+*(https://remote-recruite.netlify.app)*
 
 ## ✨ Features
 
