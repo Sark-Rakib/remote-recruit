@@ -20,7 +20,10 @@ const connectDB = async () => {
     return cachedConnection;
   }
   try {
-    await mongoose.connect(MONGO_URI);
+    await mongoose.connect(MONGO_URI, {
+      serverSelectionTimeoutMS: 10000,
+      connectTimeoutMS: 10000,
+    });
     cachedConnection = mongoose.connection;
     console.log("✅ MongoDB connected");
     return cachedConnection;
