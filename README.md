@@ -4,7 +4,7 @@ A modern, fully responsive **global remote job board** platform with a full-stac
 
 ## 🚀 Live Demo
 
-*(Add deployed URL here)*
+# https://remote-recruitt.vercel.app
 
 ## ✨ Features
 
