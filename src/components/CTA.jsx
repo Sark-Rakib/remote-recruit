@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function CTA() {
   return (
     <section className="bg-[#FAFAFC] py-16 md:py-24 lg:py-28 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* LEFT */}
           <motion.div

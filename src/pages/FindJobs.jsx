@@ -12,8 +12,22 @@ import { Link } from "react-router-dom";
 import { api } from "../api/client";
 import Navbar from "../components/Navbar";
 
-const categories = ["All", "UI/UX", "Front End", "Back End", "Data Science", "Sales", "Other"];
-const employmentTypes = ["Full Time", "Part Time", "Hourly", "Fixed-Rate", "Worldwide"];
+const categories = [
+  "All",
+  "UI/UX",
+  "Front End",
+  "Back End",
+  "Data Science",
+  "Sales",
+  "Other",
+];
+const employmentTypes = [
+  "Full Time",
+  "Part Time",
+  "Hourly",
+  "Fixed-Rate",
+  "Worldwide",
+];
 
 const formatDate = (date) =>
   new Date(date).toLocaleDateString(undefined, {
@@ -53,7 +67,7 @@ export default function FindJobs() {
 
   const toggleType = (type) =>
     setActiveTypes((prev) =>
-      prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type]
+      prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type],
     );
 
   const visibleJobs =
@@ -67,7 +81,7 @@ export default function FindJobs() {
 
       {/* Hero */}
       <section className="py-14 sm:py-18 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="px-4 text-center">
           <motion.span
             className="inline-block bg-[#D9F3FF] text-[#4A90B5] text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6"
             initial={{ opacity: 0, y: 10 }}
@@ -270,8 +284,8 @@ export default function FindJobs() {
 
                   <div className="flex items-center justify-between gap-3">
                     <span className="text-[11px] text-gray-400">
-                      Posted {formatDate(job.createdAt)} by {job.postedBy?.firstName}{" "}
-                      {job.postedBy?.lastName}
+                      Posted {formatDate(job.createdAt)} by{" "}
+                      {job.postedBy?.firstName} {job.postedBy?.lastName}
                     </span>
                     <Link
                       to={`/jobs/${job._id}`}

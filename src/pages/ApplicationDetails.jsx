@@ -126,7 +126,12 @@ export default function ApplicationDetails() {
   };
 
   const navItems = [
-    { icon: HiClipboardList, label: "My Jobs", to: "/dashboard", active: false },
+    {
+      icon: HiClipboardList,
+      label: "My Jobs",
+      to: "/dashboard",
+      active: false,
+    },
     {
       icon: HiUsers,
       label: "Applications",
@@ -136,7 +141,12 @@ export default function ApplicationDetails() {
   ];
 
   const statusActions = [
-    { status: "reviewed", label: "Mark as Reviewed", icon: HiClock, tone: "indigo" },
+    {
+      status: "reviewed",
+      label: "Mark as Reviewed",
+      icon: HiClock,
+      tone: "indigo",
+    },
     { status: "approved", label: "Approve", icon: HiCheck, tone: "green" },
     { status: "rejected", label: "Reject", icon: HiX, tone: "red" },
   ];
@@ -203,8 +213,8 @@ export default function ApplicationDetails() {
               <Badge status={app.status} />
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-              Applied for <span className="font-semibold">{app.jobTitle}</span> ·{" "}
-              {formatDate(app.appliedAt)}
+              Applied for <span className="font-semibold">{app.jobTitle}</span>{" "}
+              · {formatDate(app.appliedAt)}
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -361,7 +371,10 @@ export default function ApplicationDetails() {
               </ul>
             )}
 
-            <form onSubmit={addNote} className="flex flex-col sm:flex-row gap-2">
+            <form
+              onSubmit={addNote}
+              className="flex flex-col sm:flex-row gap-2"
+            >
               <input
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
@@ -400,7 +413,8 @@ export default function ApplicationDetails() {
                   {app.cvFile?.filename}
                 </p>
                 <p className="text-xs text-gray-400 dark:text-gray-500">
-                  {app.cvFile?.contentType} · {formatBytes(app.cvFile?.size || 0)}
+                  {app.cvFile?.contentType} ·{" "}
+                  {formatBytes(app.cvFile?.size || 0)}
                 </p>
               </div>
             </div>
@@ -454,7 +468,11 @@ export default function ApplicationDetails() {
         </div>
       </div>
 
-      <Toast message={toast?.message} type={toast?.type} onClose={() => setToast(null)} />
+      <Toast
+        message={toast?.message}
+        type={toast?.type}
+        onClose={() => setToast(null)}
+      />
     </DashboardShell>
   );
 }

@@ -122,7 +122,7 @@ export default function JobDetails() {
         {/* Job card */}
         {!loading && job && (
           <motion.div
-            className="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden"
+            className="bg-white rounded-xl border border-gray-100 overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -146,22 +146,22 @@ export default function JobDetails() {
                 {detailItem(
                   <HiBriefcase className="w-5 h-5 text-[#2563EB]" />,
                   "Employment Type",
-                  job.employmentType || "Not specified"
+                  job.employmentType || "Not specified",
                 )}
                 {detailItem(
                   <HiLocationMarker className="w-5 h-5 text-[#2563EB]" />,
                   "Location",
-                  job.location || "Not specified"
+                  job.location || "Not specified",
                 )}
                 {detailItem(
                   <HiCash className="w-5 h-5 text-[#2563EB]" />,
                   "Salary Range",
-                  job.salary || "Not disclosed"
+                  job.salary || "Not disclosed",
                 )}
                 {detailItem(
                   <HiClock className="w-5 h-5 text-[#2563EB]" />,
                   "Posted",
-                  formatDate(job.createdAt)
+                  formatDate(job.createdAt),
                 )}
               </div>
 
@@ -204,7 +204,8 @@ export default function JobDetails() {
                     Posted by {job.postedBy?.firstName} {job.postedBy?.lastName}
                   </p>
                   <p className="text-xs text-gray-400">
-                    Applications sent to {job.contactEmail || job.postedBy?.email}
+                    Applications sent to{" "}
+                    {job.contactEmail || job.postedBy?.email}
                   </p>
                 </div>
               </div>

@@ -37,7 +37,7 @@ export default function Navbar() {
           : "bg-transparent"
       } ${solid ? "border-b border-white/10" : ""}`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-[70px]">
           <Link to="/" className="flex flex-col items-center leading-tight">
             <span
@@ -68,7 +68,7 @@ export default function Navbar() {
             >
               Home
             </Link>
-            <Link
+            {/* <Link
               to="/about"
               className={`text-sm font-medium transition-colors duration-200 ${
                 solid
@@ -77,8 +77,8 @@ export default function Navbar() {
               }`}
             >
               About
-            </Link>
-            <Link
+            </Link> */}
+            {/* <Link
               to="/contact"
               className={`text-sm font-medium transition-colors duration-200 ${
                 solid
@@ -87,10 +87,10 @@ export default function Navbar() {
               }`}
             >
               Contact
-            </Link>
+            </Link> */}
             <Link
               to="/jobs"
-              className={`text-sm font-semibold px-4 py-2 rounded-lg border-2 transition-all duration-200 hover:scale-105 ${
+              className={`text-sm font-semibold px-4 py-1.5 rounded-lg border-2 transition-all duration-200 hover:scale-105 ${
                 solid
                   ? "border-white/80 text-white hover:bg-white hover:text-[#1E3A8A]"
                   : "border-[#1E3A8A] text-[#1E3A8A] hover:bg-[#1E3A8A] hover:text-white"
@@ -137,7 +137,9 @@ export default function Navbar() {
                 <div className="flex items-center gap-3">
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${
-                      solid ? "bg-white/15 text-white" : "bg-[#1E3A8A] text-white"
+                      solid
+                        ? "bg-white/15 text-white"
+                        : "bg-[#1E3A8A] text-white"
                     }`}
                   >
                     {user.firstName?.[0]}
@@ -242,7 +244,7 @@ export default function Navbar() {
               >
                 Home
               </Link>
-              <Link
+              {/* <Link
                 to="/about"
                 className={`text-sm font-medium transition-colors ${
                   solid
@@ -252,8 +254,8 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
               >
                 About
-              </Link>
-              <Link
+              </Link> */}
+              {/* <Link
                 to="/contact"
                 className={`text-sm font-medium transition-colors ${
                   solid
@@ -263,7 +265,7 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
               >
                 Contact
-              </Link>
+              </Link> */}
               <Link
                 to="/jobs"
                 className={`text-sm font-semibold px-5 py-2.5 rounded-lg border-2 transition-all duration-200 text-center ${
@@ -295,7 +297,9 @@ export default function Navbar() {
                   >
                     <div
                       className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${
-                        solid ? "bg-white/15 text-white" : "bg-[#1E3A8A] text-white"
+                        solid
+                          ? "bg-white/15 text-white"
+                          : "bg-[#1E3A8A] text-white"
                       }`}
                     >
                       {user.firstName?.[0]}
@@ -314,7 +318,9 @@ export default function Navbar() {
                     <Link
                       to="/dashboard"
                       className={`text-sm font-medium transition-colors ${
-                        solid ? "text-white/85 hover:text-white" : "text-gray-600 hover:text-[#1E3A8A]"
+                        solid
+                          ? "text-white/85 hover:text-white"
+                          : "text-gray-600 hover:text-[#1E3A8A]"
                       }`}
                       onClick={() => setMobileOpen(false)}
                     >
@@ -325,7 +331,9 @@ export default function Navbar() {
                     <Link
                       to="/admin"
                       className={`text-sm font-medium transition-colors ${
-                        solid ? "text-white/85 hover:text-white" : "text-gray-600 hover:text-[#1E3A8A]"
+                        solid
+                          ? "text-white/85 hover:text-white"
+                          : "text-gray-600 hover:text-[#1E3A8A]"
                       }`}
                       onClick={() => setMobileOpen(false)}
                     >
@@ -335,7 +343,9 @@ export default function Navbar() {
                   <button
                     onClick={handleLogout}
                     className={`flex items-center gap-1.5 text-sm font-medium text-left transition-colors ${
-                      solid ? "text-white/85 hover:text-white" : "text-gray-600 hover:text-red-500"
+                      solid
+                        ? "text-white/85 hover:text-white"
+                        : "text-gray-600 hover:text-red-500"
                     }`}
                   >
                     <HiLogout className="w-4 h-4" />
@@ -347,7 +357,9 @@ export default function Navbar() {
                   <Link
                     to="/signin"
                     className={`text-sm font-medium transition-colors ${
-                      solid ? "text-white/85 hover:text-white" : "text-gray-600 hover:text-[#1E3A8A]"
+                      solid
+                        ? "text-white/85 hover:text-white"
+                        : "text-gray-600 hover:text-[#1E3A8A]"
                     }`}
                     onClick={() => setMobileOpen(false)}
                   >

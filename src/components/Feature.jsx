@@ -100,7 +100,7 @@ export default function Feature() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[85vh] py-16 lg:py-0">
           {/* ===== LEFT: TEXT CONTENT ===== */}
           <motion.div

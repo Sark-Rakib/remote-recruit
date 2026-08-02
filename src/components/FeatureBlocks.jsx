@@ -13,7 +13,7 @@ const features = [
 export default function FeatureBlocks() {
   return (
     <section className="bg-white py-16 sm:py-20 lg:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="bg-white  overflow-hidden p-4"
           initial={{ opacity: 0, y: 30 }}

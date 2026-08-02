@@ -41,9 +41,9 @@ const employerLinks = [
 ];
 
 const contactItems = [
-  { Icon: HiMail, label: "support@remoterecruit.com" },
-  { Icon: HiPhone, label: "+1 (555) 123-4567" },
-  { Icon: HiLocationMarker, label: "100 Remote Way, San Francisco, CA" },
+  { Icon: HiMail, label: "remoterecruitt@gmail.com" },
+  { Icon: HiPhone, label: "+880 1745 762857" },
+  { Icon: HiLocationMarker, label: "100 Remote Way, Dhaka, Bangladesh" },
 ];
 
 const linkClasses =
@@ -67,7 +67,7 @@ export default function Footer() {
       <div className="absolute -right-24 -top-32 w-[380px] h-[380px] rounded-full bg-white/5" />
       <div className="absolute right-14 top-12 w-[220px] h-[160px] rounded-full border border-white/10" />
 
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+      <div className="relative z-20 px-4 sm:px-6 lg:px-8 pt-16 pb-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_0.9fr_0.9fr_1.1fr]">
           {/* Brand */}
           <div>
@@ -92,8 +92,8 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-4 text-white/70 text-sm leading-relaxed max-w-xs">
-              The global remote job board. Connect with talent and
-              opportunities anywhere in the world — no barriers, no fees.
+              The global remote job board. Connect with talent and opportunities
+              anywhere in the world — no barriers, no fees.
             </p>
 
             {/* Newsletter */}
