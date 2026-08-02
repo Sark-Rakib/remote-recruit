@@ -1,4 +1,7 @@
-const API_URL = "/api";
+// In development the Vite proxy forwards /api to the Express server. In
+// production set VITE_API_URL to the backend's full URL (e.g.
+// https://your-api.vercel.app/api) when the API lives on a separate domain.
+const API_URL = import.meta.env.VITE_API_URL || "/api";
 
 export const getToken = () => localStorage.getItem("token");
 export const setToken = (token) => localStorage.setItem("token", token);
